@@ -35,17 +35,6 @@ export async function POST(request: NextRequest) {
 
     console.log('Intentando enviar email con nodemailer...')
 
-    // Configuración del transportador de email
-    const transporter = nodemailer.createTransporter({
-      host: 'smtp.gmail.com',
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    })
-
     // Configuración del email
     const mailOptions = {
       from: process.env.EMAIL_USER,
@@ -83,18 +72,71 @@ export async function POST(request: NextRequest) {
       `,
     }
 
-    // Enviar el email
-    const result = await transporter.sendMail(mailOptions)
-    
-    console.log('Email enviado exitosamente:', result.messageId)
-
-    return NextResponse.json(
-      { 
-        message: 'Email enviado exitosamente',
-        messageId: result.messageId 
+    // Configuraciones para probar con Zoho (intentará múltiples configuraciones)
+    const zohoConfigs = [
+      {
+        name: 'Zoho STARTTLS (587)',
+        config: {
+          host: 'smtp.zoho.com',
+          port: 587,
+          secure: false,
+          auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS,
+          },
+          tls: {
+            rejectUnauthorized: false
+          }
+        }
       },
-      { status: 200 }
-    )
+      {
+        name: 'Zoho SSL (465)',
+        config: {
+          host: 'smtp.zoho.com',
+          port: 465,
+          secure: true,
+          auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS,
+          }
+        }
+      }
+    ]
+
+    let lastError = null
+    
+    // Intentar con cada configuración
+    for (const { name, config } of zohoConfigs) {
+      try {
+        console.log(`Probando configuración: ${name}`)
+        const transporter = nodemailer.createTransport(config)
+        
+        // Verificar la conexión
+        await transporter.verify()
+        console.log(`✓ Conexión exitosa con ${name}`)
+        
+        // Si llegamos aquí, usar este transportador
+        const result = await transporter.sendMail(mailOptions)
+        console.log(`✓ Email enviado exitosamente con ${name}:`, result.messageId)
+
+        return NextResponse.json(
+          { 
+            message: 'Email enviado exitosamente',
+            messageId: result.messageId,
+            method: name
+          },
+          { status: 200 }
+        )
+        
+      } catch (error) {
+        console.log(`✗ Falló configuración ${name}:`, error instanceof Error ? error.message : error)
+        lastError = error
+        continue
+      }
+    }
+    
+    // Si llegamos aquí, todas las configuraciones fallaron
+    throw lastError || new Error('Todas las configuraciones SMTP fallaron')
   } catch (error) {
     console.error('Error detallado enviando email:', error)
     

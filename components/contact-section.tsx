@@ -76,15 +76,50 @@ export function ContactSection() {
     setErrors(newErrors)
     
     if (Object.keys(newErrors).length === 0) {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
-      const subject = `Consulta desde web - ${formData.company || formData.name}`
-      const body = `Nombre: ${formData.name}%0D%0AEmpresa: ${formData.company}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMensaje:%0D%0A${formData.message}`
-      window.open(`mailto:consulta@grovex.com.ar?subject=${subject}&body=${body}`)
-      
-      setSubmitted(true)
-      setFormData({ name: "", email: "", company: "", message: "" })
+      try {
+        // Intentar enviar email a través del API
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        })
+
+        if (response.ok) {
+          // Éxito: email enviado por el servidor
+          console.log('Email enviado exitosamente por el servidor')
+          setSubmitted(true)
+          setFormData({ name: "", email: "", company: "", message: "" })
+        } else {
+          // Error del servidor: usar fallback mailto
+          console.log('Error del servidor, usando fallback mailto')
+          const errorData = await response.json().catch(() => ({ error: 'Error desconocido' }))
+          console.error('Error del API:', errorData)
+          
+          // Fallback a mailto
+          const subject = `Consulta desde web - ${formData.company || formData.name}`
+          const body = `Nombre: ${formData.name}%0D%0AEmpresa: ${formData.company}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMensaje:%0D%0A${formData.message}`
+          window.open(`mailto:consulta@grovex.com.ar?subject=${subject}&body=${body}`)
+          
+          // Mostrar mensaje de enviado de todas formas
+          setSubmitted(true)
+          setFormData({ name: "", email: "", company: "", message: "" })
+        }
+      } catch (error) {
+        // Error de conexión: usar fallback mailto
+        console.log('Error de conexión, usando fallback mailto')
+        console.error('Error de fetch:', error)
+        
+        // Fallback a mailto
+        const subject = `Consulta desde web - ${formData.company || formData.name}`
+        const body = `Nombre: ${formData.name}%0D%0AEmpresa: ${formData.company}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMensaje:%0D%0A${formData.message}`
+        window.open(`mailto:consulta@grovex.com.ar?subject=${subject}&body=${body}`)
+        
+        // Mostrar mensaje de enviado de todas formas
+        setSubmitted(true)
+        setFormData({ name: "", email: "", company: "", message: "" })
+      }
     }
     
     setIsSubmitting(false)

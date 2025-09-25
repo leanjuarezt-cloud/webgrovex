@@ -58,9 +58,8 @@ export function HeroSection() {
           <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-balance transition-all duration-1000 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
-            Transformamos PyMEs en empresas{" "}
             <span className="text-secondary animate-pulse">
-              estratégicas y escalables
+              Tu aliado estratégico para crecer
             </span>
           </h1>
 

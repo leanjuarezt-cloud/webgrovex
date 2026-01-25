@@ -28,31 +28,117 @@ export function HeroSection() {
 
   return (
     <section id="inicio" className="relative h-screen flex items-center justify-center pt-20 gradient-hero overflow-hidden">
-      {/* Animated background particles */}
+      {/* Animated background with geometric particles */}
       <div className="absolute inset-0">
+        {/* Interactive gradient following mouse */}
         <div 
-          className="absolute inset-0 bg-gradient-radial opacity-10"
+          className="absolute inset-0 opacity-15 transition-all duration-500"
           style={{
-            background: `radial-gradient(800px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(35, 176, 186, 0.15), transparent 70%)`
+            background: `radial-gradient(700px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(35, 176, 186, 0.3), transparent 70%)`
           }}
         />
-        {[...Array(20)].map((_, i) => (
+        
+        {/* Animated geometric particles */}
+        {[...Array(25)].map((_, i) => {
+          const shapeType = i % 4; // 4 tipos de formas
+          const size = Math.random() * 60 + 30;
+          
+          return (
+            <div
+              key={i}
+              className="absolute animate-float-dynamic"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 5}s`,
+                animationDuration: `${Math.random() * 8 + 10}s`,
+                opacity: 0.15 + Math.random() * 0.1,
+              }}
+            >
+              {shapeType === 0 && (
+                // Círculos con borde
+                <div
+                  className="border-2 border-secondary/40 rounded-full animate-pulse-slow"
+                  style={{
+                    width: `${size}px`,
+                    height: `${size}px`,
+                  }}
+                />
+              )}
+              {shapeType === 1 && (
+                // Cuadrados rotados (diamantes)
+                <div
+                  className="bg-white/10 backdrop-blur-sm animate-spin-slow"
+                  style={{
+                    width: `${size}px`,
+                    height: `${size}px`,
+                    transform: 'rotate(45deg)',
+                    borderRadius: '8px',
+                  }}
+                />
+              )}
+              {shapeType === 2 && (
+                // Hexágonos (simulados con clip-path)
+                <div
+                  className="bg-secondary/20"
+                  style={{
+                    width: `${size}px`,
+                    height: `${size}px`,
+                    clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+                  }}
+                />
+              )}
+              {shapeType === 3 && (
+                // Círculos rellenos con gradiente
+                <div
+                  className="rounded-full animate-pulse-slow"
+                  style={{
+                    width: `${size}px`,
+                    height: `${size}px`,
+                    background: i % 2 === 0 
+                      ? 'radial-gradient(circle, rgba(35, 176, 186, 0.3), transparent)'
+                      : 'radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent)',
+                  }}
+                />
+              )}
+            </div>
+          );
+        })}
+
+        {/* Líneas decorativas animadas */}
+        {[...Array(8)].map((_, i) => (
           <div
-            key={i}
-            className="absolute bg-white/5 rounded-full animate-float"
+            key={`line-${i}`}
+            className="absolute h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent animate-slide-horizontal"
             style={{
-              width: `${Math.random() * 100 + 20}px`,
-              height: `${Math.random() * 100 + 20}px`,
+              width: `${Math.random() * 300 + 200}px`,
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${Math.random() * 10 + 15}s`
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${Math.random() * 10 + 15}s`,
+            }}
+          />
+        ))}
+
+        {/* Círculos concéntricos que pulsan */}
+        {[...Array(3)].map((_, i) => (
+          <div
+            key={`ring-${i}`}
+            className="absolute border border-white/10 rounded-full animate-ping-slow"
+            style={{
+              width: `${200 + i * 100}px`,
+              height: `${200 + i * 100}px`,
+              left: '50%',
+              top: '50%',
+              transform: 'translate(-50%, -50%)',
+              animationDelay: `${i * 1}s`,
+              animationDuration: '8s',
             }}
           />
         ))}
       </div>
       
-      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute inset-0 bg-black/15"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-balance transition-all duration-1000 ${

@@ -59,9 +59,9 @@ export function TeamSection() {
   return (
     <section id="equipo" className="py-12 lg:py-16 bg-background relative overflow-hidden" ref={sectionRef}>
       {/* Background decoration */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-32 left-10 w-64 h-64 bg-secondary rounded-full blur-3xl"></div>
-        <div className="absolute bottom-32 right-10 w-72 h-72 bg-primary rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+        <div className="absolute top-32 left-10 w-40 h-40 bg-secondary rounded-full blur-2xl"></div>
+        <div className="absolute bottom-32 right-10 w-48 h-48 bg-primary rounded-full blur-2xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -81,30 +81,29 @@ export function TeamSection() {
           {team.map((member, index) => (
             <Card
               key={index}
-              className={`border-0 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-500 overflow-hidden glass hover-lift ${
+              className={`border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden glass hover-lift ${
                 isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
               }`}
               style={{ animationDelay: `${member.delay}ms` }}
             >
-              <div className="aspect-[4/3] relative overflow-hidden group">
+              <div className="aspect-[4/3] relative overflow-hidden">
                 <Image
                   src={member.image || "/placeholder.svg"}
                   alt={member.name}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority={index === 0}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              <CardContent className="p-4 group">
-                <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors duration-300">{member.name}</h3>
+              <CardContent className="p-4">
+                <h3 className="text-lg font-bold mb-2 transition-colors duration-300">{member.name}</h3>
                 <p className="text-secondary font-medium mb-3 text-sm">{member.role}</p>
                 <p className="text-muted-foreground text-xs leading-relaxed mb-3">{member.description}</p>
                 <div className="flex justify-center">
                   <button 
                     onClick={() => window.open(member.linkedin, '_blank')}
-                    className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 hover:scale-110 transition-all duration-300"
+                    className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors duration-300"
                   >
                     <Linkedin className="h-4 w-4 text-primary" />
                   </button>
@@ -115,7 +114,7 @@ export function TeamSection() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className={`bg-gradient-section rounded-2xl p-8 lg:p-12 text-center glass hover-lift transition-all duration-700 ${
+          <div className={`bg-gradient-section rounded-2xl p-8 lg:p-12 text-center glass hover-lift transition-shadow duration-300 ${
             isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
           }`} style={{ animationDelay: '800ms' }}>
             <h3 className="text-2xl lg:text-3xl font-bold mb-6 text-balance bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -123,26 +122,26 @@ export function TeamSection() {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
               <div className="space-y-6">
-                <div className="group hover:bg-white/5 rounded-lg p-4 transition-all duration-300">
-                  <h4 className="font-semibold text-primary mb-3 group-hover:text-secondary transition-colors">Equipo Interdisciplinario</h4>
+                <div className="hover:bg-white/5 rounded-lg p-4 transition-colors duration-300">
+                  <h4 className="font-semibold text-primary mb-3 transition-colors">Equipo Interdisciplinario</h4>
                   <p className="text-muted-foreground text-sm">
                     Miradas complementarias que abordan todos los aspectos del negocio
                   </p>
                 </div>
-                <div className="group hover:bg-white/5 rounded-lg p-4 transition-all duration-300">
-                  <h4 className="font-semibold text-secondary mb-3 group-hover:text-primary transition-colors">Arquitectura Empresarial</h4>
+                <div className="hover:bg-white/5 rounded-lg p-4 transition-colors duration-300">
+                  <h4 className="font-semibold text-secondary mb-3 transition-colors">Arquitectura Empresarial</h4>
                   <p className="text-muted-foreground text-sm">Enfoque integral y sistémico como método propio</p>
                 </div>
               </div>
               <div className="space-y-6">
-                <div className="group hover:bg-white/5 rounded-lg p-4 transition-all duration-300">
-                  <h4 className="font-semibold text-primary mb-3 group-hover:text-secondary transition-colors">Mirada Externa</h4>
+                <div className="hover:bg-white/5 rounded-lg p-4 transition-colors duration-300">
+                  <h4 className="font-semibold text-primary mb-3 transition-colors">Mirada Externa</h4>
                   <p className="text-muted-foreground text-sm">
                     Perspectiva fresca y no sesgada, sin inercias internas
                   </p>
                 </div>
-                <div className="group hover:bg-white/5 rounded-lg p-4 transition-all duration-300">
-                  <h4 className="font-semibold text-secondary mb-3 group-hover:text-primary transition-colors">Resultados Concretos</h4>
+                <div className="hover:bg-white/5 rounded-lg p-4 transition-colors duration-300">
+                  <h4 className="font-semibold text-secondary mb-3 transition-colors">Resultados Concretos</h4>
                   <p className="text-muted-foreground text-sm">
                     No informes que quedan en cajones, sino implementación real
                   </p>

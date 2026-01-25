@@ -2,12 +2,16 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const isHomePage = pathname === "/"
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +22,10 @@ export function Header() {
   }, [])
 
   const scrollToSection = (sectionId: string) => {
+    if (!isHomePage) {
+      window.location.href = `/#${sectionId}`
+      return
+    }
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
@@ -30,7 +38,9 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex items-center">
-            <Image src="/images/grovex-logo.png" alt="Grovex" width={140} height={40} className="h-8 w-auto lg:h-10" />
+            <Link href="/">
+              <Image src="/images/grovex-logo.png" alt="Grovex" width={140} height={40} className="h-8 w-auto lg:h-10 cursor-pointer" />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -53,6 +63,12 @@ export function Header() {
             >
               Equipo
             </button>
+            <Link
+              href="/blog"
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Blog
+            </Link>
             <button
               onClick={() => scrollToSection("contacto")}
               className="text-foreground hover:text-primary transition-colors font-medium"
@@ -98,6 +114,13 @@ export function Header() {
               >
                 Equipo
               </button>
+              <Link
+                href="/blog"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-left text-foreground hover:text-primary transition-colors font-medium"
+              >
+                Blog
+              </Link>
               <button
                 onClick={() => scrollToSection("contacto")}
                 className="text-left text-foreground hover:text-primary transition-colors font-medium"

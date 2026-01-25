@@ -141,9 +141,9 @@ export function ContactSection() {
   return (
     <section id="contacto" className="py-12 lg:py-16 bg-background relative overflow-hidden" ref={sectionRef}>
       {/* Background decoration */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 right-20 w-80 h-80 bg-secondary rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-60 h-60 bg-primary rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+        <div className="absolute top-20 right-20 w-56 h-56 bg-secondary rounded-full blur-2xl"></div>
+        <div className="absolute bottom-20 left-20 w-40 h-40 bg-primary rounded-full blur-2xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

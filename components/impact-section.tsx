@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Target, TrendingUp, Building } from "lucide-react"
+import { Clock, Brain, Shield } from "lucide-react"
 
 export function ImpactSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -27,23 +27,23 @@ export function ImpactSection() {
 
   const impacts = [
     {
-      icon: Target,
-      title: "Mayor claridad estratégica",
-      description: "Saber exactamente dónde está tu empresa hoy y hacia dónde debe ir. Objetivos claros y hoja de ruta definida.",
+      icon: Clock,
+      title: "Más tiempo para lo importante",
+      description: "Menos tiempo perdido en tareas manuales, búsquedas de información y retrabajos. Más foco en hacer crecer el negocio.",
       color: "primary",
       delay: 200
     },
     {
-      icon: TrendingUp,
-      title: "Mejor calidad de decisiones",
-      description: "Decisiones respaldadas en datos, contexto y visión macro. Menos intuición, más información estratégica.",
+      icon: Brain,
+      title: "Decisiones con información clara",
+      description: "Datos ordenados, métricas simples y procesos claros. Sabés qué está pasando y podés decidir mejor.",
       color: "secondary",
       delay: 400
     },
     {
-      icon: Building,
-      title: "Profesionalización y escalabilidad",
-      description: "Estructuras, procesos y gobernanza que permiten crecer de manera ordenada y sostenible.",
+      icon: Shield,
+      title: "Tranquilidad y control",
+      description: "Operaciones registradas correctamente, riesgos identificados y controles en su lugar. Crecés con la base ordenada.",
       color: "primary",
       delay: 600
     }
@@ -52,9 +52,9 @@ export function ImpactSection() {
   return (
     <section className="py-12 lg:py-16 gradient-section relative overflow-hidden" ref={sectionRef}>
       {/* Background decoration */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-primary rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-secondary rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+        <div className="absolute top-20 left-20 w-48 h-48 bg-primary rounded-full blur-2xl"></div>
+        <div className="absolute bottom-20 right-20 w-56 h-56 bg-secondary rounded-full blur-2xl"></div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -65,8 +65,7 @@ export function ImpactSection() {
             Resultados que obtienes
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground text-pretty">
-            Nuestro impacto se mide en la transformación real de tu empresa. Estos son los cambios concretos que
-            experimentarás.
+            Los beneficios concretos que vas a experimentar cuando ordenás la información, mejorás los procesos y reducís riesgos.
           </p>
         </div>
 
@@ -74,16 +73,16 @@ export function ImpactSection() {
           {impacts.map(({ icon: Icon, title, description, color, delay }, index) => (
             <Card 
               key={index}
-              className={`border-0 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-500 text-center glass hover-lift ${
+              className={`border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center glass hover-lift ${
                 isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
               }`}
               style={{ animationDelay: `${delay}ms` }}
             >
               <CardContent className="p-6 group">
-                <div className={`bg-${color}/20 rounded-full p-3 w-12 h-12 mx-auto mb-4 flex items-center justify-center group-hover:bg-${color}/30 group-hover:scale-110 transition-all duration-300 animate-pulse-glow`}>
+                <div className={`bg-${color}/20 rounded-full p-3 w-12 h-12 mx-auto mb-4 flex items-center justify-center group-hover:bg-${color}/30 transition-colors duration-300`}>
                   <Icon className={`h-6 w-6 text-${color}`} />
                 </div>
-                <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors duration-300">{title}</h3>
+                <h3 className="text-lg font-bold mb-3 transition-colors duration-300">{title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {description}
                 </p>

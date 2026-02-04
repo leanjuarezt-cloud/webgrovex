@@ -62,7 +62,7 @@ export function ImpactSection() {
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
         }`}>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-balance bg-gradient-to-r from-secondary via-primary to-secondary bg-clip-text text-transparent">
-            Resultados que obtienes
+            Resultados que obtenés
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground text-pretty">
             Los beneficios concretos que vas a experimentar cuando ordenás la información, mejorás los procesos y reducís riesgos.

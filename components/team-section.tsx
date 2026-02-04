@@ -118,7 +118,7 @@ export function TeamSection() {
             isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0 translate-y-10'
           }`} style={{ animationDelay: '800ms' }}>
             <h3 className="text-2xl lg:text-3xl font-bold mb-6 text-balance bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Nuestra ventaja competitiva
+              ¿Por qué trabajar con nosotros?
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
               <div className="space-y-6">
@@ -137,13 +137,13 @@ export function TeamSection() {
                 <div className="hover:bg-white/5 rounded-lg p-4 transition-colors duration-300">
                   <h4 className="font-semibold text-primary mb-3 transition-colors">Mirada Externa</h4>
                   <p className="text-muted-foreground text-sm">
-                    Perspectiva fresca y no sesgada, sin inercias internas
+                    Visión objetiva desde afuera, sin compromisos previos ni sesgos del día a día
                   </p>
                 </div>
                 <div className="hover:bg-white/5 rounded-lg p-4 transition-colors duration-300">
                   <h4 className="font-semibold text-secondary mb-3 transition-colors">Resultados Concretos</h4>
                   <p className="text-muted-foreground text-sm">
-                    No informes que quedan en cajones, sino implementación real
+                    Implementación real y acompañada, no diagnósticos que terminan archivados
                   </p>
                 </div>
               </div>

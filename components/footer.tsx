@@ -25,8 +25,7 @@ export function Footer() {
               className="h-10 w-auto mb-6 brightness-0 invert"
             />
             <p className="text-primary-foreground/80 mb-6 max-w-md">
-              Consultora estratégica especializada en transformar PyMEs en empresas escalables con visión sistémica y
-              acompañamiento activo.
+              Ordenamos tu información, mejoramos tus procesos y prevenimos riesgos. Más claridad, mejores decisiones, crecimiento sostenible.
             </p>
             <div className="text-secondary font-medium">Growing to the next level</div>
           </div>
@@ -94,7 +93,14 @@ export function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Linkedin className="h-4 w-4 text-secondary" />
-                <span className="text-primary-foreground/80">LinkedIn</span>
+                <a
+                  href="https://www.linkedin.com/company/grovex-consulting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-foreground/80 hover:text-secondary transition-colors"
+                >
+                  Grovex Consulting
+                </a>
               </li>
             </ul>
           </div>

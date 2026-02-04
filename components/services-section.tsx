@@ -38,7 +38,7 @@ export function ServicesSection() {
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
         }`}>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-balance bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Cómo lo hacemos
+            Qué hacemos
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground text-pretty">
             Tres pilares fundamentales para ordenar, crecer y tomar mejores decisiones en tu empresa.
@@ -54,19 +54,19 @@ export function ServicesSection() {
               <div className="bg-primary/20 rounded-full p-2 w-10 h-10 mb-3 flex items-center justify-center hover:bg-primary/30 transition-colors duration-300">
                 <Database className="h-5 w-5 text-primary" />
               </div>
-              <CardTitle className="text-xl lg:text-2xl text-balance transition-colors">
+              <CardTitle className="text-2xl lg:text-3xl text-balance transition-colors">
                 Digitalización, datos e Inteligencia Artificial
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="space-y-2">
                 <div className="flex items-start space-x-2">
-                  <HelpCircle className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-                  <p className="text-xs text-muted-foreground italic">¿Tenés un montón de excels y documentos y no sabés bien dónde está cada cosa?</p>
+                  <HelpCircle className="h-5 w-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground italic">¿Tenés un montón de excels y documentos y no sabés bien dónde está cada cosa?</p>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <HelpCircle className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-                  <p className="text-xs text-muted-foreground italic">¿Escuchaste hablar de CRM, ERP, métricas, automatizaciones o IA, pero no sabés si realmente lo necesitás?</p>
+                  <HelpCircle className="h-5 w-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground italic">¿Escuchaste hablar de CRM, ERP, métricas, automatizaciones o IA, pero no sabés si realmente lo necesitás?</p>
                 </div>
               </div>
               <div className="space-y-2 pt-2">
@@ -77,8 +77,8 @@ export function ServicesSection() {
                   "Nos encargamos de la parte técnica así vos te podés encargar de decidir mejor"
                 ].map((item, index) => (
                   <div key={index} className="flex items-start space-x-2">
-                    <CheckCircle className="h-3.5 w-3.5 text-primary mt-0.5 flex-shrink-0" />
-                    <p className="text-xs text-foreground">{item}</p>
+                    <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                    <p className="text-base text-foreground">{item}</p>
                   </div>
                 ))}
               </div>
@@ -93,19 +93,19 @@ export function ServicesSection() {
               <div className="bg-secondary/20 rounded-full p-2 w-10 h-10 mb-3 flex items-center justify-center hover:bg-secondary/30 transition-colors duration-300">
                 <Cog className="h-5 w-5 text-secondary" />
               </div>
-              <CardTitle className="text-xl lg:text-2xl text-balance transition-colors">
+              <CardTitle className="text-2xl lg:text-3xl text-balance transition-colors">
                 Mejora de procesos
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="space-y-2">
                 <div className="flex items-start space-x-2">
-                  <HelpCircle className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-                  <p className="text-xs text-muted-foreground italic">¿Las cosas dependen demasiado de personas puntuales?</p>
+                  <HelpCircle className="h-5 w-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground italic">¿Las cosas dependen demasiado de personas puntuales?</p>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <HelpCircle className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-                  <p className="text-xs text-muted-foreground italic">¿Hay tareas que se hacen "porque siempre fue así"?</p>
+                  <HelpCircle className="h-5 w-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground italic">¿Hay tareas que se hacen "porque siempre fue así"?</p>
                 </div>
               </div>
               <div className="space-y-2 pt-2">
@@ -116,8 +116,8 @@ export function ServicesSection() {
                   "Dejamos una forma de trabajo clara y repetible"
                 ].map((item, index) => (
                   <div key={index} className="flex items-start space-x-2">
-                    <CheckCircle className="h-3.5 w-3.5 text-secondary mt-0.5 flex-shrink-0" />
-                    <p className="text-xs text-foreground">{item}</p>
+                    <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                    <p className="text-base text-foreground">{item}</p>
                   </div>
                 ))}
               </div>
@@ -132,19 +132,19 @@ export function ServicesSection() {
               <div className="bg-primary/20 rounded-full p-2 w-10 h-10 mb-3 flex items-center justify-center hover:bg-primary/30 transition-colors duration-300">
                 <ShieldCheck className="h-5 w-5 text-primary" />
               </div>
-              <CardTitle className="text-xl lg:text-2xl text-balance transition-colors">
+              <CardTitle className="text-2xl lg:text-3xl text-balance transition-colors">
                 Prevención de riesgos contables y legales
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="space-y-2">
                 <div className="flex items-start space-x-2">
-                  <HelpCircle className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-                  <p className="text-xs text-muted-foreground italic">¿La contabilidad, los impuestos o los contratos te generan dudas o inseguridad?</p>
+                  <HelpCircle className="h-5 w-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground italic">¿La contabilidad, los impuestos o los contratos te generan dudas o inseguridad?</p>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <HelpCircle className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-                  <p className="text-xs text-muted-foreground italic">¿Sentís que todo funciona, pero no tenés del todo claro si está bien armado?</p>
+                  <HelpCircle className="h-5 w-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                  <p className="text-sm text-muted-foreground italic">¿Sentís que todo funciona, pero no tenés del todo claro si está bien armado?</p>
                 </div>
               </div>
               <div className="space-y-2 pt-2">
@@ -156,8 +156,8 @@ export function ServicesSection() {
                   "Te ayudamos a ordenar la base para crecer con tranquilidad"
                 ].map((item, index) => (
                   <div key={index} className="flex items-start space-x-2">
-                    <CheckCircle className="h-3.5 w-3.5 text-primary mt-0.5 flex-shrink-0" />
-                    <p className="text-xs text-foreground">{item}</p>
+                    <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                    <p className="text-base text-foreground">{item}</p>
                   </div>
                 ))}
               </div>

@@ -152,8 +152,7 @@ export function HeroSection() {
           <p className={`text-xl sm:text-2xl mb-8 text-white/90 text-pretty max-w-3xl mx-auto transition-all duration-1000 delay-300 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
-            Ayudamos a empresas a crecer y profesionalizarse con visión sistémica, datos y acompañamiento activo. Del
-            ruido a la claridad.
+            Ordenamos tu información, mejoramos tus procesos y prevenimos riesgos. Más claridad, mejores decisiones, crecimiento sostenible.
           </p>
 
           <div className={`flex justify-center mb-16 transition-all duration-1000 delay-500 ${

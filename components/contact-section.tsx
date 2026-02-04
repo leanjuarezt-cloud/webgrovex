@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Phone, Mail, Send, CheckCircle, AlertCircle, MessageCircle, Instagram } from "lucide-react"
+import { Phone, Mail, Send, CheckCircle, AlertCircle, MessageCircle, Instagram, Linkedin } from "lucide-react"
 
 interface FormErrors {
   name?: string
@@ -299,7 +299,8 @@ export function ContactSection() {
                     { icon: Mail, label: "Email", value: "consulta@grovex.com.ar", href: "mailto:consulta@grovex.com.ar", color: "secondary" },
                     { icon: Phone, label: "Teléfono", value: "+54 351 2453599", href: "tel:+543512453599", color: "primary" },
                     { icon: MessageCircle, label: "WhatsApp", value: "+54 351 2453599", href: "https://wa.me/543512453599?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20consultoría", color: "secondary" },
-                    { icon: Instagram, label: "Instagram", value: "@grovexconsulting", href: "https://www.instagram.com/grovexconsulting/", color: "primary" }
+                    { icon: Instagram, label: "Instagram", value: "@grovexconsulting", href: "https://www.instagram.com/grovexconsulting/", color: "primary" },
+                    { icon: Linkedin, label: "LinkedIn", value: "Grovex Consulting", href: "https://www.linkedin.com/company/grovex-consulting", color: "secondary" }
                   ].map(({ icon: Icon, label, value, href, color }, index) => (
                     <div key={index} className="flex items-center space-x-4 group hover:bg-white/5 rounded-lg p-3 transition-all duration-300">
                       <div className={`bg-${color}/10 rounded-full p-3 group-hover:bg-${color}/20 group-hover:scale-110 transition-all duration-300`}>

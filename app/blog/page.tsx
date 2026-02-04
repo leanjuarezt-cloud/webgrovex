@@ -14,6 +14,14 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    title: "La Paradoja del Progreso: Brecha de Adopción de IA en el Ecosistema Empresarial Argentino (Reporte 2026)",
+    excerpt: "Argentina se consolida como líder en adopción de IA en América Latina con un 53% de adopción tecnológica. Sin embargo, existe una brecha crítica: 6 de cada 10 argentinos usan IA personalmente, pero solo el 43% de las empresas la integra efectivamente en sus operaciones.",
+    author: "Leandro Juarez Teitelman",
+    date: "4 de febrero, 2026",
+    slug: "brecha-ia-argentina-2026",
+    readTime: "12 min"
+  },
+  {
     title: "Cuando el producto habla, el ruido baja.",
     excerpt: "Vivimos rodeados de estímulos. Hay campañas masivas, influencers que promocionan sin saber qué venden, bots generando interacciones y estrategias personalizadas en cada canal. Pero todo eso se cae si en el momento en que el usuario prueba el producto, no funciona.",
     author: "Leandro Juarez Teitelman",

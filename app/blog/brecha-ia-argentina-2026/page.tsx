@@ -6,10 +6,10 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "La Paradoja del Progreso: Brecha de Adopción de IA en el Ecosistema Empresarial Argentino (Reporte 2026) | Blog Grovex",
+  title: "La Paradoja del Progreso: Brecha de Adopción de IA en el Ecosistema Empresarial Argentino | Blog Grovex",
   description: "Argentina se consolida como líder en adopción de IA en América Latina, pero existe una brecha crítica entre el uso personal y la integración empresarial efectiva.",
   openGraph: {
-    title: "La Paradoja del Progreso: Brecha de Adopción de IA en Argentina (2026)",
+    title: "La Paradoja del Progreso: Brecha de Adopción de IA en Argentina",
     description: "Análisis de la adopción de IA en empresas argentinas y la brecha entre PyMEs y grandes corporaciones",
   }
 }
@@ -32,7 +32,7 @@ export default function ArticlePage() {
           {/* Article Header */}
           <header className="mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              La Paradoja del Progreso: Brecha de Adopción de IA en el Ecosistema Empresarial Argentino (Reporte 2026)
+              La Paradoja del Progreso: Brecha de Adopción de IA en el Ecosistema Empresarial Argentino
             </h1>
             
             <div className="flex flex-wrap items-center gap-6 text-muted-foreground">
@@ -112,7 +112,7 @@ export default function ArticlePage() {
             </ul>
 
             <p className="mb-6">
-              Los casos de éxito en 2026 destacan el uso de agentes inteligentes en WhatsApp para comercios minoristas (repuesteras, ferreterías), permitiendo atención 24/7 y gestión de stock en lenguaje natural, igualando la capacidad de servicio de una multinacional.
+              Los casos de éxito en 2026 destacan el uso de agentes inteligentes en WhatsApp para comercios minoristas, permitiendo atención 24/7 y gestión de stock en lenguaje natural.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">3. Barreras Estructurales: El Cuello de Botella del Talento</h2>
@@ -151,7 +151,7 @@ export default function ArticlePage() {
               Para que las PyMEs no queden rezagadas en este ciclo alcista, el financiamiento se ha vuelto más accesible. Líneas del Banco Nación con tasas bonificadas del 27,9% y programas provinciales como los de Mendoza (aportes de hasta USD 500.000 para startups de IA) son las herramientas que están nivelando la cancha.
             </p>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6">Conclusión Estratégica</h2>
+            <h2 className="text-3xl font-bold mt-12 mb-6">Conclusión</h2>
 
             <p className="mb-6">
               La brecha de IA en Argentina en 2026 no es tecnológica, es de criterio estratégico. El éxito ya no se mide por "usar" IA, sino por la capacidad de rediseñar procesos para que el 80% del valor provenga del cambio organizacional y solo el 20% de la tecnología en sí misma.
@@ -160,6 +160,121 @@ export default function ArticlePage() {
             <p className="mb-6">
               Aquellas PyMEs que logren superar la barrera del "no sé cómo" mediante la capacitación y el uso de los beneficios fiscales existentes, serán las que lideren la competitividad en la segunda mitad de esta década.
             </p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Referencias</h2>
+
+            <ol className="list-decimal pl-6 space-y-3 text-sm">
+              <li>
+                <a href="https://www.youtube.com/watch?v=83yZhn9xw2E" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Primera encuesta nacional sobre adopción y usos de inteligencia artificial en Argentina y Uruguay - YouTube
+                </a>
+              </li>
+              <li>
+                <a href="https://mercado.com.ar/economia-y-politica/el-87-de-los-ceo-argentinos-preve-crecimiento-economico-e-impulsa-ia-segun-encuesta-de-pwc/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  El 87% de los CEO argentinos prevé crecimiento económico e impulsa IA, según encuesta de PwC - Revista Mercado
+                </a>
+              </li>
+              <li>
+                <a href="https://www.eldestapeweb.com/tecnologia/inteligencia-artificial/argentina-es-de-los-paises-que-mas-adoptaron-la-ia-segun-google-2026127213053" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Argentina lidera entre los países que más adoptaron la IA, según Google - El Destape
+                </a>
+              </li>
+              <li>
+                <a href="https://www.pwc.com/co/es/pwc-insights/2026-predicciones-empresariales-sobre-IA.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  2026: predicciones empresariales sobre IA - PwC
+                </a>
+              </li>
+              <li>
+                <a href="https://pymesplus.ar/blog/actualidad-tendencias/opciones_de_financiamiento_para_pymes_en_argentina_en_2025.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Opciones de Financiamiento para PyMEs en Argentina en 2025 - PymesPlus
+                </a>
+              </li>
+              <li>
+                <a href="https://www.infobae.com/tecno/2026/01/27/mexico-y-argentina-lideran-la-adopcion-global-de-ia-y-transforman-su-uso-segun-google/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  México y Argentina lideran la adopción global de IA y transforman su uso, según Google
+                </a>
+              </li>
+              <li>
+                <a href="https://www.itsitio.com/ar/fintech/fintech-e-ia-en-argentina-hay-fuerte-adopcion-pero-persisten-desafios-internos/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Fintech e IA en Argentina: hay fuerte adopción, pero persisten desafíos internos - ITSitio
+                </a>
+              </li>
+              <li>
+                <a href="https://ecosistemastartup.com/convocatorias-2026-financiamiento-para-startups-y-tecnologia/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Convocatorias 2026: financiamiento para startups y tecnología - El Ecosistema Startup
+                </a>
+              </li>
+              <li>
+                <a href="https://www.argencon.org/el-despliegue-constante-de-ia-continua-en-argentina-a-pesar-de-las-barreras-segun-un-estudio-de-ibm/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  El despliegue constante de IA continúa en Argentina a pesar de las barreras, según un estudio de IBM - Argencon
+                </a>
+              </li>
+              <li>
+                <a href="https://kualitaconsultores.com/que-es-la-ley-de-economia-del-conocimiento/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  ¿Qué es la Ley de Economía del Conocimiento y qué beneficios brinda?
+                </a>
+              </li>
+              <li>
+                <a href="https://www.pwc.com/ia/es/Issues/agenda-de-liderazgo/Predicciones-Empresariales-de-IA-para-2026.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Predicciones Empresariales de IA para 2026 - PwC
+                </a>
+              </li>
+              <li>
+                <a href="https://inteligenciaargentina.ar/inteligencia-artificial/argentina-adopta-ia-en-lo-personal-pero-las-empresas-no-acompanan-solo-el-43-la-integra-en-serio" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Argentina adopta IA en lo personal, pero las empresas no acompañan: solo el 43% la integra en serio
+                </a>
+              </li>
+              <li>
+                <a href="https://iap.org.ar/robot-especializado-en-soldaduras-complejas/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Impacto Creciente de la IA en los procesos Pyme en 2025 - IAP
+                </a>
+              </li>
+              <li>
+                <a href="https://enac.org.ar/contenido/4209/solo-el-284-de-las-pymes-tuvo-rentabilidad-en-el-segundo-trimestre-2025-leo-bila" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  "Solo el 28,4% de las pymes tuvo rentabilidad en el segundo trimestre 2025" Leo Bilanski de Enac en C5N - Empresarios Nacionales
+                </a>
+              </li>
+              <li>
+                <a href="https://prensa.mendoza.gob.ar/financiamiento-para-startups-abren-una-convocatoria-con-aportes-de-hasta-usd-500-000/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Financiamiento para startups: abren una convocatoria con aportes de hasta 500.000 dólares | PRENSA GOBIERNO DE MENDOZA
+                </a>
+              </li>
+              <li>
+                <a href="https://blog.colppy.com/guia-ley-de-economia-del-conocimiento" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Ley de economía del conocimiento: La nueva Ley 27570 facilita la calidad de vida
+                </a>
+              </li>
+              <li>
+                <a href="https://www.iae.edu.ar/2026/01/informe-economico-mensual-enero-2026/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Informe Económico Mensual | Enero 2026 - IAE Business School
+                </a>
+              </li>
+              <li>
+                <a href="https://cessi.org.ar/opssi/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  OPSSI - Cessi - Cámara de la Industria Argentina del Software
+                </a>
+              </li>
+              <li>
+                <a href="https://www.pwc.com.ar/es/publicaciones/economia-del-conocimiento.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Economía del Conocimiento - PwC Argentina
+                </a>
+              </li>
+              <li>
+                <a href="https://infomendoza.info/enfoque/la-ia-en-2026-nivela-la-cancha-de-las-pymes-con-las-grandes-corporaciones" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  La IA en 2026: nivela la cancha de las pymes con las grandes corporaciones - InfoMendoza
+                </a>
+              </li>
+              <li>
+                <a href="https://www.economiasalta.gob.ar/conosalta/wp-content/uploads/2024/05/Econom%C3%ADa-del-Conocimiento.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Economía del Conocimiento
+                </a>
+              </li>
+              <li>
+                <a href="https://www.canal-ar.com.ar/33757-Mas-empleo-mayor-facturacion-y-mejores-salarios-en-la-industria-del-software-segun-CESSI.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Más empleo, mayor facturación y mejores salarios en la industria del software según CESSI
+                </a>
+              </li>
+            </ol>
           </div>
 
           {/* Back Button Bottom */}

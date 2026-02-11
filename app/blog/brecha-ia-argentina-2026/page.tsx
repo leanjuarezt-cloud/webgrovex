@@ -100,7 +100,7 @@ export default function ArticlePage() {
             <h2 className="text-3xl font-bold mt-12 mb-6">2. PyMEs: La IA como Herramienta de Supervivencia</h2>
 
             <p className="mb-6">
-              Para la pequeña y mediana empresa argentina, la IA ha dejado de ser un lujo para convertirse en un mecanismo de compensación ante la baja rentabilidad (solo el 28,4% de las PyMEs reportó rentabilidad positiva a mediados de 2025).
+              Para la pequeña y mediana empresa argentina, la IA ha dejado de ser un lujo para convertirse en un mecanismo de compensación ante la baja rentabilidad.
             </p>
 
             <p className="mb-4">Los resultados de quienes ya la implementan son contundentes:</p>
@@ -161,22 +161,12 @@ export default function ArticlePage() {
               Aquellas PyMEs que logren superar la barrera del "no sé cómo" mediante la capacitación y el uso de los beneficios fiscales existentes, serán las que lideren la competitividad en la segunda mitad de esta década.
             </p>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6">Referencias</h2>
+            <h2 className="text-3xl font-bold mt-12 mb-6">Enlaces útiles</h2>
 
             <ol className="list-decimal pl-6 space-y-3 text-sm">
               <li>
-                <a href="https://www.youtube.com/watch?v=83yZhn9xw2E" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  Primera encuesta nacional sobre adopción y usos de inteligencia artificial en Argentina y Uruguay - YouTube
-                </a>
-              </li>
-              <li>
                 <a href="https://mercado.com.ar/economia-y-politica/el-87-de-los-ceo-argentinos-preve-crecimiento-economico-e-impulsa-ia-segun-encuesta-de-pwc/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                   El 87% de los CEO argentinos prevé crecimiento económico e impulsa IA, según encuesta de PwC - Revista Mercado
-                </a>
-              </li>
-              <li>
-                <a href="https://www.eldestapeweb.com/tecnologia/inteligencia-artificial/argentina-es-de-los-paises-que-mas-adoptaron-la-ia-segun-google-2026127213053" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  Argentina lidera entre los países que más adoptaron la IA, según Google - El Destape
                 </a>
               </li>
               <li>
@@ -185,13 +175,13 @@ export default function ArticlePage() {
                 </a>
               </li>
               <li>
-                <a href="https://pymesplus.ar/blog/actualidad-tendencias/opciones_de_financiamiento_para_pymes_en_argentina_en_2025.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  Opciones de Financiamiento para PyMEs en Argentina en 2025 - PymesPlus
+                <a href="https://www.infobae.com/tecno/2026/01/27/mexico-y-argentina-lideran-la-adopcion-global-de-ia-y-transforman-su-uso-segun-google/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  México y Argentina lideran la adopción global de IA y transforman su uso, según Google
                 </a>
               </li>
               <li>
-                <a href="https://www.infobae.com/tecno/2026/01/27/mexico-y-argentina-lideran-la-adopcion-global-de-ia-y-transforman-su-uso-segun-google/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  México y Argentina lideran la adopción global de IA y transforman su uso, según Google
+                <a href="https://www.youtube.com/watch?v=83yZhn9xw2E" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Primera encuesta nacional sobre adopción y usos de inteligencia artificial en Argentina y Uruguay - YouTube
                 </a>
               </li>
               <li>
@@ -210,11 +200,6 @@ export default function ArticlePage() {
                 </a>
               </li>
               <li>
-                <a href="https://kualitaconsultores.com/que-es-la-ley-de-economia-del-conocimiento/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  ¿Qué es la Ley de Economía del Conocimiento y qué beneficios brinda?
-                </a>
-              </li>
-              <li>
                 <a href="https://www.pwc.com/ia/es/Issues/agenda-de-liderazgo/Predicciones-Empresariales-de-IA-para-2026.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                   Predicciones Empresariales de IA para 2026 - PwC
                 </a>
@@ -227,51 +212,6 @@ export default function ArticlePage() {
               <li>
                 <a href="https://iap.org.ar/robot-especializado-en-soldaduras-complejas/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                   Impacto Creciente de la IA en los procesos Pyme en 2025 - IAP
-                </a>
-              </li>
-              <li>
-                <a href="https://enac.org.ar/contenido/4209/solo-el-284-de-las-pymes-tuvo-rentabilidad-en-el-segundo-trimestre-2025-leo-bila" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  "Solo el 28,4% de las pymes tuvo rentabilidad en el segundo trimestre 2025" Leo Bilanski de Enac en C5N - Empresarios Nacionales
-                </a>
-              </li>
-              <li>
-                <a href="https://prensa.mendoza.gob.ar/financiamiento-para-startups-abren-una-convocatoria-con-aportes-de-hasta-usd-500-000/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  Financiamiento para startups: abren una convocatoria con aportes de hasta 500.000 dólares | PRENSA GOBIERNO DE MENDOZA
-                </a>
-              </li>
-              <li>
-                <a href="https://blog.colppy.com/guia-ley-de-economia-del-conocimiento" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  Ley de economía del conocimiento: La nueva Ley 27570 facilita la calidad de vida
-                </a>
-              </li>
-              <li>
-                <a href="https://www.iae.edu.ar/2026/01/informe-economico-mensual-enero-2026/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  Informe Económico Mensual | Enero 2026 - IAE Business School
-                </a>
-              </li>
-              <li>
-                <a href="https://cessi.org.ar/opssi/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  OPSSI - Cessi - Cámara de la Industria Argentina del Software
-                </a>
-              </li>
-              <li>
-                <a href="https://www.pwc.com.ar/es/publicaciones/economia-del-conocimiento.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  Economía del Conocimiento - PwC Argentina
-                </a>
-              </li>
-              <li>
-                <a href="https://infomendoza.info/enfoque/la-ia-en-2026-nivela-la-cancha-de-las-pymes-con-las-grandes-corporaciones" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  La IA en 2026: nivela la cancha de las pymes con las grandes corporaciones - InfoMendoza
-                </a>
-              </li>
-              <li>
-                <a href="https://www.economiasalta.gob.ar/conosalta/wp-content/uploads/2024/05/Econom%C3%ADa-del-Conocimiento.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  Economía del Conocimiento
-                </a>
-              </li>
-              <li>
-                <a href="https://www.canal-ar.com.ar/33757-Mas-empleo-mayor-facturacion-y-mejores-salarios-en-la-industria-del-software-segun-CESSI.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  Más empleo, mayor facturación y mejores salarios en la industria del software según CESSI
                 </a>
               </li>
             </ol>

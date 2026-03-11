@@ -15,11 +15,11 @@ export const metadata: Metadata = {
 const blogPosts = [
   {
     title: "\"Ahora van a tener que competir\". Una afirmación engañosa",
-    excerpt: "Reflexión sobre competencia y estrategia empresarial.",
+    excerpt: "La frase se repite sin que nadie se detenga a preguntarse qué significa competir, en qué condiciones eso es posible o imposible, y qué le corresponde hacer a una empresa ante un entorno que cambió de manera estructural.",
     author: "Ignacio Gregorat",
     date: "27 de febrero, 2026",
     slug: "ahora-van-a-tener-que-competir-afirmacion-enganosa",
-    readTime: "PDF"
+    readTime: "15 min"
   },
   {
     title: "La Paradoja del Progreso: Brecha de Adopción de IA en el Ecosistema Empresarial Argentino",

@@ -14,6 +14,14 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    title: "\"Ahora van a tener que competir\". Una afirmación engañosa",
+    excerpt: "Reflexión sobre competencia y estrategia empresarial.",
+    author: "Ignacio Gregorat",
+    date: "27 de febrero, 2026",
+    slug: "ahora-van-a-tener-que-competir-afirmacion-enganosa",
+    readTime: "PDF"
+  },
+  {
     title: "La Paradoja del Progreso: Brecha de Adopción de IA en el Ecosistema Empresarial Argentino",
     excerpt: "Argentina se consolida como líder en adopción de IA en América Latina con un 53% de adopción tecnológica. Sin embargo, existe una brecha crítica: 6 de cada 10 argentinos usan IA personalmente, pero solo el 43% de las empresas la integra efectivamente en sus operaciones.",
     author: "Leandro Juarez Teitelman",

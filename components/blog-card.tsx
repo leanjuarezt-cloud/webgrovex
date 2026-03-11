@@ -35,7 +35,7 @@ export function BlogCard({ title, excerpt, author, date, slug, readTime = "5 min
           <p className="text-muted-foreground line-clamp-3">{excerpt}</p>
         </CardContent>
         <CardFooter>
-          <Badge variant="secondary">{readTime} de lectura</Badge>
+          <Badge variant="secondary">{readTime === "PDF" ? "Ver PDF" : `${readTime} de lectura`}</Badge>
         </CardFooter>
       </Card>
     </Link>

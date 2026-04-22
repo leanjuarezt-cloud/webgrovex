@@ -1,0 +1,51 @@
+🔧 CONFIGURACIÓN DE EMAIL PARA GROVEX (ZOHO MAIL)
+================================================
+
+✅ YA IMPLEMENTADO:
+- ✅ API endpoint configurado para Zoho SMTP
+- ✅ Formulario mejorado con mensaje de confirmación
+- ✅ Sistema de fallback automático (mailto)  
+- ✅ Archivo .env.local creado
+- ✅ Configuración múltiple (STARTTLS 587 y SSL 465)
+
+🔑 PASO CRÍTICO - CONFIGURAR TU CONTRASEÑA:
+
+1. ABRIR EL ARCHIVO .env.local Y CAMBIAR:
+   EMAIL_PASS=BHyTEvKVTX0V
+
+   
+   Por tu contraseña real de Zoho.
+
+2. CONFIGURACIÓN EN ZOHO:
+
+   OPCIÓN A - Contraseña de aplicación (RECOMENDADO):
+   - Ir a https://accounts.zoho.com/
+   - Iniciar sesión con consulta@grovex.com.ar
+   - Configuración → Seguridad → Contraseñas de aplicación
+   - Crear password para "Grovex Website"
+   - Usar ESA contraseña en .env.local
+
+   OPCIÓN B - Contraseña normal:
+   - Usar tu contraseña normal de Zoho
+   - Activar "Acceso IMAP/POP" en configuración
+
+3. REINICIAR EL SERVIDOR:
+   npm run dev
+
+4. PROBAR EL FORMULARIO:
+   - Ir a localhost:3000
+   - Completar formulario
+   - Ver consola del navegador (F12) para logs
+   - Revisar bandeja de consulta@grovex.com.ar
+
+🔍 DIAGNÓSTICO:
+- ✅ El sistema probará AMBOS puertos (587 y 465)
+- ✅ Logs detallados en consola del servidor
+- ✅ Si falla SMTP, abre mailto automáticamente
+- ✅ Siempre muestra "mensaje enviado"
+
+🆘 SI SIGUE SIN FUNCIONAR:
+- Contactar soporte de Zoho
+- Verificar que el email está activo
+- Confirmar credenciales
+- Revisar logs del servidor

@@ -52,6 +52,7 @@ export function TeamSection() {
         "Contador Público, con trayectoria en control de gestión e impuestos, orientado principalmente al análisis y optimización de procesos mediante el uso de datos. Tiene experiencia trabajando en startups como en empresas multinacionales.",
       image: "/images/team/joaquin.jpg",
       linkedin: "https://www.linkedin.com/in/joaquin-escudero-2021/",
+      objectPosition: "center 15%",
       delay: 600
     },
   ]
@@ -92,6 +93,7 @@ export function TeamSection() {
                   alt={member.name}
                   fill
                   className="object-cover"
+                  style={{ objectPosition: member.objectPosition || "center top" }}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority={index === 0}
                 />

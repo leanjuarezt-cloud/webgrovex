@@ -46,12 +46,12 @@ export function TeamSection() {
       delay: 400
     },
     {
-      name: "Francisco Lucca",
-      role: "Finanzas y Datos",
+      name: "Joaquin Escudero",
+      role: "Control de gestión y datos",
       description:
-        "Contador Público, con trayectoria en finanzas e impuestos, orientado principalmente al análisis y optimización de procesos mediante el uso de datos.",
-      image: "/images/team/francisco.jpg",
-      linkedin: "https://www.linkedin.com/in/francisco-lucca-607ab1169/",
+        "Contador Público, con trayectoria en control de gestión e impuestos, orientado principalmente al análisis y optimización de procesos mediante el uso de datos. Tiene experiencia trabajando en startups como en empresas multinacionales.",
+      image: "/images/team/joaquin.jpg",
+      linkedin: "https://www.linkedin.com/in/joaquin-escudero-2021/",
       delay: 600
     },
   ]
